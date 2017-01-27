@@ -96,21 +96,22 @@ gps_alt_av         = movingaverage(gps_alt,2)
 # Time Parameters
 tf = 850
 dt = 0.25 #
-time = np.linspace(230, tf, tf/dt)  #np.linspace(0, max_time, max_sample, endpoint=False)
-Thrust_propeller_wt = np.zeros(tf/dt)
-Thrust = np.zeros(tf/dt)
-Thrust_sensor = np.zeros(tf/dt)
-Drag = np.zeros(tf/dt)
-Drag_coeff = np.zeros(tf/dt)
-Thrust_sigsq = np.zeros(tf/dt)
-Drag_sigsq = np.zeros(tf/dt)
-V_rec = np.zeros(tf/dt)
-P11_rec = np.zeros(tf/dt)
-P22_rec = np.zeros(tf/dt)
-P33_rec = np.zeros(tf/dt)
-W_rec_north = np.zeros(tf/dt)
-W_rec_east = np.zeros(tf/dt)
-W_rec_norm = np.zeros(tf/dt)
+ending = 850 * 4 # tf/dt
+time = np.linspace(230, tf, ending)  #np.linspace(0, max_time, max_sample, endpoint=False)
+Thrust_propeller_wt = np.zeros(ending)
+Thrust = np.zeros(ending)
+Thrust_sensor = np.zeros(ending)
+Drag = np.zeros(ending)
+Drag_coeff = np.zeros(ending)
+Thrust_sigsq = np.zeros(ending)
+Drag_sigsq = np.zeros(ending)
+V_rec = np.zeros(ending)
+P11_rec = np.zeros(ending)
+P22_rec = np.zeros(ending)
+P33_rec = np.zeros(ending)
+W_rec_north = np.zeros(ending)
+W_rec_east = np.zeros(ending)
+W_rec_norm = np.zeros(ending)
 
 M_ac    = 1.0  # Mass of the Aircraft
 M_motor = 0.07 # Mass of the motor block
